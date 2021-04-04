@@ -821,11 +821,11 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
 
   # Dump fingerprints
   script.Print("Target: {}".format(target_info.fingerprint))
-
+  
   script.Print("**************************************");
-  script.Print("$$$$$$$$  GARUDA OS -INFERNO $$$$$$$$$");
-  script.Print("$$$$$$$$ Fueled AND remodel by LineageOS $$$$$$$$$");
-  script.Print("            By TeamMinati             ");
+  script.Print("$$$$$$$$ GARUDA OS -INFERNO $$$$$$$$$");
+  script.Print("$$$$$$$$ Fueled by LineageOS $$$$$$$$$");
+  script.Print("            WELCOME             ");
   script.Print("**************************************");
   androidver = target_info.GetBuildProp("ro.build.version.release")
   buildidn = target_info.GetBuildProp("ro.build.id")
@@ -842,7 +842,7 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   script.Print(" Manufacturer     : %s"%(manufacturer));
   script.Print("**********************************************");
   script.Print("                                         ");
-
+  
   device_specific.FullOTA_InstallBegin()
 
   CopyInstallTools(output_zip)
