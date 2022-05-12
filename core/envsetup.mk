@@ -204,10 +204,10 @@ endif
 
 # the host build defaults to release, and it must be release or debug
 ifeq ($(HOST_BUILD_TYPE),)
-HOST_BUILD_TYPE := release
+HOST_BUILD_TYPE := official
 endif
 
-ifneq ($(HOST_BUILD_TYPE),release)
+ifneq ($(HOST_BUILD_TYPE),official)
 ifneq ($(HOST_BUILD_TYPE),debug)
 $(error HOST_BUILD_TYPE must be either release or debug, not '$(HOST_BUILD_TYPE)')
 endif
@@ -278,7 +278,7 @@ include $(BUILD_SYSTEM)/board_config.mk
 
 # the target build type defaults to release
 ifneq ($(TARGET_BUILD_TYPE),debug)
-TARGET_BUILD_TYPE := release
+TARGET_BUILD_TYPE := official
 endif
 
 # ---------------------------------------------------------------
